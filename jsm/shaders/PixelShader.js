@@ -8,7 +8,11 @@
 
 		'tDiffuse': { value: null },
 		'resolution': { value: null },
+<<<<<<< HEAD
 		'pixelSize': { value: 4},
+=======
+		'pixelSize': { value: 4 },
+>>>>>>> 40eaebe2b80930f4a7e136c004d355a6f2b6d489
 
 	},
 

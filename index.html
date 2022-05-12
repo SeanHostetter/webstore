@@ -148,10 +148,17 @@
 			/*---------------------------------------------------------------OBJECT ARRAYS*/
 
 			//GLTF LOADER---------------------------------------------------------------
+<<<<<<< HEAD
 
 			var Puter;
 			var puterCollision;
 			var GYS_Clothes;
+=======
+			// instantiate a loader
+			const loader = new OBJLoader();
+			var MasterSkull;
+			var XOR_Streetwear;
+>>>>>>> 40eaebe2b80930f4a7e136c004d355a6f2b6d489
 
 			function loadPuter(){
 				const onProgress = function ( xhr ) {
@@ -159,11 +166,32 @@
 					const percentComplete = xhr.loaded / xhr.total * 100;
 					console.log( Math.round( percentComplete, 2 ) + '% downloaded' );
 				}
+<<<<<<< HEAD
 				};
 
 				new MTLLoader()
 					.setPath( 'models/gltf/' )
 					.load( 'puter.mtl', function ( materials ) {
+=======
+			);
+			
+			loader.load(
+				// resource URL
+				'models/gltf/XOR_Streetwear.obj',
+				// called when resource is loaded
+				function ( object ) {
+					object.userData.name = "XOR_Streetwear";
+					
+					XOR_Streetwear = object;
+					XOR_Streetwear.rotation.order = 'ZYX';
+					XOR_Streetwear.rotation.y = Math.PI/2;
+					XOR_Streetwear.rotation.x = Math.PI/2;
+					XOR_Streetwear.scale.set(1.5, 1.5, 1.5);
+					XOR_Streetwear.position.y = -3.5;
+
+					const material = new THREE.MeshBasicMaterial( { color: 'black' } );
+					XOR_Streetwear.material = material;
+>>>>>>> 40eaebe2b80930f4a7e136c004d355a6f2b6d489
 
 						materials.preload();
 
