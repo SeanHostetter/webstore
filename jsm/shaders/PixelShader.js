@@ -8,7 +8,7 @@
 
 		'tDiffuse': { value: null },
 		'resolution': { value: null },
-		'pixelSize': { value: 4},
+		'pixelSize': { value: 1},
 
 	},
 
